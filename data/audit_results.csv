@@ -1,4 +1,4 @@
-Task Category,Task Description,Baseline Time (mins),Assisted Time (mins),Rework Rate (%),Net-Negative Flag,Quality Score (1-5)
+Task Category,Task Description,Baseline Time (mins),Tool-Assisted Time (mins),Rework Rate (%),Net-Negative Flag,Quality Score (1-5)
 Scaffolding,Generate REST API controller boilerplate,25,5,10,False,4.5
 Scaffolding,Write unit test framework setup,30,8,15,False,4.2
 Scaffolding,Create database migration script for new table,20,12,30,False,3.8

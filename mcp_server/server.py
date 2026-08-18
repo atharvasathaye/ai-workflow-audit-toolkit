@@ -70,7 +70,7 @@ def get_sprint_burndown(repo: str) -> str:
 def search_docs(query: str, repo: str) -> str:
     """
     Search for documentation, issues, or PRs matching a specific query in the repository.
-    This provides critical context for the AI without needing copy-pasting.
+    This provides critical context for the automation tools without needing copy-pasting.
     """
     try:
         result = subprocess.run(
