@@ -1,0 +1,16 @@
+Task Category,Task Description,Baseline Time (mins),Assisted Time (mins),Rework Rate (%),Net-Negative Flag,Quality Score (1-5)
+Scaffolding,Generate REST API controller boilerplate,25,5,10,False,4.5
+Scaffolding,Write unit test framework setup,30,8,15,False,4.2
+Scaffolding,Create database migration script for new table,20,12,30,False,3.8
+Documentation,Draft PR description from commit history,15,3,5,False,4.8
+Documentation,Add inline docstrings to undocumented class,25,6,10,False,4.5
+Documentation,Write release notes based on sprint tickets,45,15,20,False,4.0
+Refactoring,Convert dict responses to Pydantic models,35,15,40,False,3.5
+Refactoring,Abstract repeated validation logic into middleware,40,45,60,True,2.5
+Refactoring,Rename user_id to account_uuid across 15 files,30,10,25,False,3.8
+Refactoring,Migrate legacy authentication wrapper,90,110,80,True,2.0
+Project Management,Triage vague bug report into actionable steps,20,25,70,True,2.2
+Project Management,Write Gherkin acceptance criteria for feature,25,10,20,False,4.0
+Project Management,Map dependency chain for new epic,45,30,50,False,3.0
+Context Gathering,Find where email parsing logic lives,15,4,5,False,4.8
+Context Gathering,Summarize why a 3-year-old workaround exists,30,12,15,False,4.2
