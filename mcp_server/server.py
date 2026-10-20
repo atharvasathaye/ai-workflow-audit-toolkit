@@ -1,6 +1,12 @@
 import subprocess
 import json
-from mcp.server.fastmcp import FastMCP
+try:
+    from mcp.server.fastmcp import FastMCP
+except ImportError:
+    try:
+        from mcp.server import MCPServer as FastMCP
+    except ImportError:
+        from mcp.server.mcpserver import MCPServer as FastMCP
 
 # Initialize FastMCP server
 mcp = FastMCP("GitHub Sprint Context")

@@ -11,13 +11,23 @@ This dashboard visualizes the results of our **Engineering Tooling Baseline Audi
 It compares manual task execution times (Baseline) against automation-assisted execution times across 15 standard sprint tasks.
 """)
 
+from pathlib import Path
+
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("../data/audit_results.csv")
-    df['Time Saved (mins)'] = df['Baseline Time (mins)'] - df['Tool-Assisted Time (mins)']
-    df['Time Saved (%)'] = (df['Time Saved (mins)'] / df['Baseline Time (mins)']) * 100
-    return df
+    possible_paths = [
+        Path(__file__).resolve().parent.parent / "data" / "audit_results.csv",
+        Path("data/audit_results.csv"),
+        Path("../data/audit_results.csv"),
+    ]
+    for path in possible_paths:
+        if path.exists():
+            df = pd.read_csv(path)
+            df['Time Saved (mins)'] = df['Baseline Time (mins)'] - df['Tool-Assisted Time (mins)']
+            df['Time Saved (%)'] = (df['Time Saved (mins)'] / df['Baseline Time (mins)']) * 100
+            return df
+    raise FileNotFoundError("audit_results.csv not found in expected locations.")
 
 try:
     df = load_data()
